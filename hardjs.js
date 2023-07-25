@@ -12,14 +12,13 @@ let reward = 0;
 let currentFlipCount=0;
 let correctlyFlipped = [];
 
-moves=25;
+moves=32;
 document.querySelector(".move").innerText = moves;
 
 function flip(){
     this.classList.add("flip");
-    console.log(this);
-
     currentFlipCount++;
+    
     if(currentFlipCount==1){
         firstCard = this;
         firstCard.removeEventListener("click", flip);
@@ -35,16 +34,12 @@ function flip(){
     else{
         fourthCard = this;
         cards.forEach((card) => card.removeEventListener("click", flip));
-        console.log(firstCard);
-        console.log(secondCard);
-        console.log(thirdCard);
-        console.log(fourthCard);
         check();
     }
 
-    if(!moves || correctlyFlipped.length==32){
+    if(!moves || correctlyFlipped.length==64){
         cards.forEach((card) => card.removeEventListener("click", flip));
-        if(correctlyFlipped.length==32){
+        if(correctlyFlipped.length==64){
             setTimeout(function() {
                 window.location.href = "win.html";
             }, 1000);
@@ -113,7 +108,7 @@ function reset(){
 
 function shuffle(){
     cards.forEach((card) => {
-        var index = Math.floor(Math.random() * 32);
+        var index = Math.floor(Math.random() * 64);
         card.style.order = index;
     })
 }

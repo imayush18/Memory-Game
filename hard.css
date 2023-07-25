@@ -10,8 +10,8 @@ body{
 }
   
 .gameContainer {
-    width: 600px;
-    height: 450px;
+    width: 800px;
+    height: 370px;
     margin: auto;
     display: flex;
     flex-wrap: wrap;
@@ -20,12 +20,12 @@ body{
 }
   
 .text-center {
-    font-size: 30px;
+    font-size: 25px;
 }
   
 .card {
-    width: 23%;
-    height: 23%;
+    width: 11%;
+    height: 18%;
     margin: 5px;
     position: relative;
     transform-style: preserve-3d;
@@ -60,7 +60,11 @@ body{
 }
 
 .extradetails{
-    /* text-align: center; */
+    margin-top: -10%;
     color: #DBEDF3;
     font-family: sans-serif;
+}
+
+h1{
+    font-size: 30px;
 }
