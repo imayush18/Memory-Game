@@ -11,7 +11,7 @@ let reward = 0;
 let currentFlipCount=0;
 let correctlyFlipped = [];
   
-moves=25;
+moves=30;
 document.querySelector(".move").innerText = moves;
 
 function flip(){
@@ -36,9 +36,9 @@ function flip(){
         check();
     }
 
-    if(!moves || correctlyFlipped.length==24){
+    if(!moves || correctlyFlipped.length==36){
         cards.forEach((card) => card.removeEventListener("click", flip));
-        if(correctlyFlipped.length==24){
+        if(correctlyFlipped.length==36){
             setTimeout(function() {
                 window.location.href = "win.html";
             }, 1000);
@@ -101,7 +101,7 @@ function reset(){
 
 function shuffle(){
     cards.forEach((card) => {
-        var index = Math.floor(Math.random() * 24);
+        var index = Math.floor(Math.random() * 36);
         card.style.order = index;
     })
 }
