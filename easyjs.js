@@ -10,7 +10,7 @@ let reward = 0;
 let currentFlipCount=0;
 let correctlyFlipped = [];
 
-moves=25;
+moves=24;
 document.querySelector(".move").innerText = moves;
 
 function flip(){
